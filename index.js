@@ -27,12 +27,12 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   Study the code for counter1 and counter2, then answer the questions below.
   
-  1. What is the difference between counter1 and counter2?
+  1. What is the difference between counter1 and counter2? Counter 1 uses a function scope because the variable is declared in the function, counter 2 uses a global variable that can be accessed outside or inside the function.
   
-  2. Which of the two uses a closure? How can you tell?
+  2. Which of the two uses a closure? How can you tell? Counter 1 uses closure because it has a function inside the function and it uses the variable from the parent function.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better?  Count 1 would be prefered when you only need that variable to be used inside the function, counter 2 would be better to use when you need to access the same variable outside of the function.
 */
 
 // counter1 code
@@ -62,11 +62,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    return Math.floor(Math.random() * 2)
 }
 
-
+console.log(inning())
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
   1. Receive the callback function `inning` that was created in Task 2 
